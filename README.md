@@ -1,6 +1,6 @@
 # README
 
-This cluster contains Terraform config to create a Kubernetes cluster on Digital Ocean and a shell script that gets a kubeconfig for accessing that cluster.
+Terraform config to create a Kubernetes cluster on Digital Ocean and a shell script that gets a kubeconfig for accessing that cluster.
 
 It assumes you have a Digital Ocean token ([here's how to get one](https://www.digitalocean.com/docs/api/create-personal-access-token/)).
 
