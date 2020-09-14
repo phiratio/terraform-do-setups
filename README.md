@@ -7,7 +7,7 @@ Digital Ocean, Cloudflare and own domain are required
 ## How to run
 
 ```
-git clone -b nginx_loadbalancer git@github.com:phiratio/terraform-do-cluster.git
+git clone -b nginx_loadbalancer git@github.com:phiratio/terraform-do-setups.git
 export DO_PAT="<your_digital_ocean_token>"
 export TF_LOG=1
 terraform init
