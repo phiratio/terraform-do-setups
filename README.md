@@ -32,6 +32,7 @@ export CF_TOKEN="<your cloudflare token>"
 export CF_MAIL="<your cloudflare email>"
 export CF_ZONE_ID="<your cf domain zone id>"
 export CF_DOMAIN="<your cf domain zone id>"
+
 terraform plan \
   -var "do_token=${DO_PAT}" \
   -var "pvt_key=$HOME/.ssh/sshkey" \
@@ -39,6 +40,7 @@ terraform plan \
   -var "cf_email=$CF_EMAIL" \
   -var "cf_domain=$CF_DOMAIN" \
   -var "cf_zone_id=$CF_ZONE_ID"
+  
 terraform apply \
   -var "do_token=${DO_PAT}" \
   -var "pvt_key=$HOME/.ssh/sshkey" \
@@ -46,6 +48,7 @@ terraform apply \
   -var "cf_email=$CF_EMAIL" \
   -var "cf_domain=$CF_DOMAIN" \
   -var "cf_zone_id=$CF_ZONE_ID"
+  
 terraform plan -destroy -out=terraform.tfplan \
   -var "do_token=${DO_PAT}" \
   -var "pvt_key=$HOME/.ssh/sshkey" \
@@ -53,6 +56,7 @@ terraform plan -destroy -out=terraform.tfplan \
   -var "cf_email=$CF_EMAIL" \
   -var "cf_domain=$CF_DOMAIN" \
   -var "cf_zone_id=$CF_ZONE_ID"
+  
 terraform apply terraform.tfplan  
 
 ```
