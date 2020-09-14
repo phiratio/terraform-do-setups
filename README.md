@@ -8,7 +8,6 @@ Digital Ocean, Cloudflare and own domain are required
 
 ```
 git clone -b nginx_loadbalancer git@github.com:phiratio/terraform-do-cluster.git
-todo git checkout
 export DO_PAT="<your_digital_ocean_token>"
 export TF_LOG=1
 terraform init
@@ -27,6 +26,7 @@ terraform refresh \
 # create second nginx instance
 sed 's/www-1/www-2/g' www-1.tf > www-2.tf
 # and load balancer, repeat plan and apply steps
+
 # cname with cloudflare
 export CF_TOKEN="<your cloudflare token>"
 export CF_MAIL="<your cloudflare email>"
@@ -53,6 +53,6 @@ terraform plan -destroy -out=terraform.tfplan \
   -var "cf_email=$CF_EMAIL" \
   -var "cf_domain=$CF_DOMAIN" \
   -var "cf_zone_id=$CF_ZONE_ID"
-```
+terraform apply terraform.tfplan  
 
-terraform plan -destroy -out=terraform.tfplan
+```
