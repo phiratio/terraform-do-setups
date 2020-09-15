@@ -21,7 +21,7 @@ variable "cf_zone_id" {}
 provider "digitalocean" {
   token = var.do_token
 }
-#how you named your ssh key when added
+#how you named your ssh key when you added it to DO
 data "digitalocean_ssh_key" "botdd" {
   name = "botdd"
 }
