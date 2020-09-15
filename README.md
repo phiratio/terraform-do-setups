@@ -31,7 +31,7 @@ sed 's/www-1/www-2/g' www-1.tf > www-2.tf
 export CF_TOKEN="<your cloudflare token>"
 export CF_MAIL="<your cloudflare email>"
 export CF_ZONE_ID="<your cf domain zone id>"
-export CF_DOMAIN="<your cf domain zone id>"
+export CF_DOMAIN="<your cf domain e.g. domain.com>"
 
 terraform plan \
   -var "do_token=${DO_PAT}" \
